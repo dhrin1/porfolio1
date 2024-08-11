@@ -1,7 +1,8 @@
 import DefaultLayout from "@/components/default-layout";
+import Image from "next/image";
 
 function HomeLayout({ children }: { children: React.ReactNode }) {
-  return <main className="max-w-screen-md w-full ">{children}</main>;
+  return <main className="max-w-screen-lg w-full px-3 ">{children}</main>;
 }
 
 function HeroSection() {
@@ -13,7 +14,7 @@ function HeroSection() {
             <div className="size-[100px] rounded-full bg-red-200 border "></div>
           </div>
           <div className="grid grid-y text-center">
-            <h6>Hi there! 👋🏻</h6>
+            <h6 className="text-2xl text-gray-800">Hi there! 👋🏻</h6>
             <h2 className="font-bold text-4xl ">I'm Alhdrin</h2>
             <label>Full Stack Developer</label>
           </div>
@@ -34,7 +35,7 @@ function AboutSection() {
           </div>
           <div className="size-full border rounded-3xl p-10">
             <div className="flex w-full items-center h-full">
-              <div className="h-full flex flex-col">
+              <div className="h-full flex flex-col space-y-2">
                 <h2 className="text-4xl font-bold">Personal hits all-time</h2>
                 <p className="text-xl font-semibold">
                   As a versatile developer skilled in both frontend and backend
@@ -55,38 +56,168 @@ function AboutSection() {
 function WorkSection() {
   return (
     <section className="h-auto flex ">
-      <div className="flex flex-col space-y-2 ">
-        <div className="h-[500vh] ">
-          <div className="w-full mb-5">
-            <div className="grid grid-y-2">
-              <h6>Interested?</h6>
-              <h2 className="text-4xl font-bold w-[70%]">
-                Revealing my collection of{" "}
-                <span className="text-gray-200">projects</span>
-              </h2>
-            </div>
-          </div>
-          <div className="sticky top-0 h-[100vh] w-full flex space-x-4 justify-start">
-            {new Array(7).fill(0).map((i, idx) => (
-              <div
-                key={idx}
-                className="border rounded-3xl h-1/3 w-[55vh] bg-red-200"
-              ></div>
-            ))}
-          </div>
+      <div className="w-full mb-5">
+        <div className="grid grid-y-2">
+          <h6>Interested?</h6>
+          <h2 className="text-4xl font-bold w-[70%]">
+            Revealing my collection of{" "}
+            <span className="text-gray-200">projects</span>
+          </h2>
         </div>
       </div>
     </section>
   );
 }
 
+export interface Company {
+  title: string;
+  name: string;
+}
+
+const company: Company[] = [
+  { title: "Title 1", name: "Description 1" },
+  { title: "Title 2", name: "Description 2" },
+  { title: "Title 3", name: "Description 3" },
+  { title: "Title 4", name: "Description 4" },
+  { title: "Title 4", name: "Description 4" },
+];
+
 export default function Home() {
+  console.log(parseInt((company.length / 2).toFixed()));
   return (
     <DefaultLayout>
       <HomeLayout>
-        <HeroSection />
+        {/* <HeroSection />
         <AboutSection />
-        <WorkSection />
+        <WorkSection /> */}
+        <section className="h-[780px] w-full">
+          <div className="h-full flex items-center">
+            <div className="w-full">
+              <div className="flex flex-col space-y-3">
+                <h1 className="text-4xl font-semibold">Hi there! 👋🏻</h1>
+                <div className="grid grid-cols-3 gap-x-5 w-full">
+                  <div className="col-span-3 md:col-span-2 h-[300px] rounded-3xl bg-red-100 ">
+                    <div className="h-full flex justify-between items-center">
+                      <div className="grid h-full  p-5">
+                        <div className="flex flex-col space-y-1 ">
+                          <label className="text-xl font-semibold text-gray-800">
+                            Software Developer
+                          </label>
+                          <h1 className="text-5xl font-bold text-gray-800">
+                            Alhdrin Gungon
+                          </h1>
+                        </div>
+                        <div>
+                          <button className="p-3 rounded-2xl hover:bg-red-200 transition-colors duration-200 bg-white text-gray-800 font-medium">
+                            <label>Let's connect {"->"}</label>
+                          </button>
+                        </div>
+                      </div>
+                      <div className="relative ">
+                        <Image
+                          src="https://i.pinimg.com/474x/40/3e/10/403e107dfc78506640c2fb48e0197fa3.jpg"
+                          height={200}
+                          width={200}
+                          alt="sample"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="rounded-3xl bg-red-100">
+                    <div className="flex justify-center items-center h-full">
+                      <div className="grid text-center">
+                        {company.map((i, idx) => (
+                          <div
+                            key={idx}
+                            className="flex flex-col justify-center"
+                          >
+                            <h2
+                              className={`text-[${
+                                parseInt((company.length / 2).toFixed(), 10) -
+                                idx * 100
+                              }px]`}
+                            >
+                              {i.title}
+                            </h2>
+                            <p>{i.name}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="h-[780px] w-full ">
+          <div className="h-full">
+            <div className="flex flex-col space-y-5">
+              <h2 className="text-4xl font-semibold ">
+                Revealing my works of collection projects 📦
+              </h2>
+              <div className="flex flex-row space-x-5 overflow-x-scroll w-full">
+                {new Array(8).fill(0).map((v, idx) => (
+                  <div
+                    key={idx}
+                    className="flex-none h-[500px] rounded-3xl bg-red-100 w-[300px] p-5"
+                  >
+                    A
+                  </div>
+                ))}
+              </div>
+              <div className="w-full flex justify-end">
+                <button className="rounded-full size-12 bg-white ">
+                  <label className="font-bold text-xl  text-gray-800">
+                    {"->"}
+                  </label>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="h-[780px] w-full">
+          <div className="flex flex-col space-y-3">
+            <div className="grid text-center">
+              <label>To make that possible</label>
+              <h2 className="text-4xl font-bold">I used these technology</h2>
+            </div>
+            <div className="flex justify-center">
+              <div className="grid grid-cols-4 grid-rows-3 gap-5">
+                {new Array(15).fill(0).map((i, idx) => (
+                  <div
+                    key={idx}
+                    className="size-[150px] bg-gray-100 rounded-3xl p-5"
+                  >
+                    A
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="h-[780px] w-full">
+          <div className="flex flex-col">
+            <div className="w-full flex justify-center">
+              <div className="relative">
+                <div className="grid text-center z-10 text-red-500 absolute">
+                  <label>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </label>
+                  <h2>dsadasds</h2>
+                </div>
+                <div className="absolute h-[500px] rounded-3xl bg-white w-[300px] p-5">
+                  A
+                </div>
+                <div className="absolute -mt-10 -left-5 h-[500px] rounded-3xl bg-white w-[300px] p-5">
+                  B
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </HomeLayout>
     </DefaultLayout>
   );
