@@ -94,7 +94,7 @@ export default function Home() {
             <div className="w-full">
               <div className="flex flex-col space-y-5 sm:space-y-3">
                 <h1 className="text-4xl font-semibold">Hi there! 👋🏻</h1>
-                <div className="grid grid-cols-3 gap-x-5 w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-5 w-full">
                   <div className="col-span-3 md:col-span-2 h-[17rem] rounded-3xl bg-red-100 ">
                     <div className="size-full flex relative items-center">
                       <div className="relative grid h-full p-5 z-10">
@@ -115,7 +115,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="absolute right-0 ">
-                        <div className=" w-[20rem]    -mt-[0.5rem] sm:-mt-[2.2rem]">
+                        <div className=" w-[20rem]   -mt-[2.2rem]">
                           <Image
                             src="https://res.cloudinary.com/dhrin1/image/upload/c_limit,w_960/f_auto/q_auto/agitlgsijcx6leygfzag?_a=BAVAcMGd0"
                             alt="sample"
@@ -130,10 +130,10 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="rounded-3xl bg-red-100">
+                  <div className=" rounded-3xl bg-red-100">
                     <div className="flex justify-center items-center h-full">
                       <div className="grid text-center">
-                        {company.map((i, idx) => (
+                        {/* {company.map((i, idx) => (
                           <div
                             key={idx}
                             className="flex flex-col justify-center"
@@ -148,7 +148,7 @@ export default function Home() {
                             </h2>
                             <p>{i.name}</p>
                           </div>
-                        ))}
+                        ))} */}
                       </div>
                     </div>
                   </div>
