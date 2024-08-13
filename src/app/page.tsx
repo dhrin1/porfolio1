@@ -83,7 +83,6 @@ const company: Company[] = [
 ];
 
 export default function Home() {
-  console.log(parseInt((company.length / 2).toFixed()));
   return (
     <DefaultLayout>
       <HomeLayout>
@@ -93,33 +92,41 @@ export default function Home() {
         <section className="h-[780px] w-full">
           <div className="h-full flex items-center">
             <div className="w-full">
-              <div className="flex flex-col space-y-3">
+              <div className="flex flex-col space-y-5 sm:space-y-3">
                 <h1 className="text-4xl font-semibold">Hi there! 👋🏻</h1>
                 <div className="grid grid-cols-3 gap-x-5 w-full">
-                  <div className="col-span-3 md:col-span-2 h-[300px] rounded-3xl bg-red-100 ">
-                    <div className="h-full flex justify-between items-center">
-                      <div className="grid h-full  p-5">
-                        <div className="flex flex-col space-y-1 ">
-                          <label className="text-xl font-semibold text-gray-800">
-                            Software Developer
-                          </label>
-                          <h1 className="text-5xl font-bold text-gray-800">
-                            Alhdrin Gungon
-                          </h1>
+                  <div className="col-span-3 md:col-span-2 h-[17rem] rounded-3xl bg-red-100 ">
+                    <div className="size-full flex relative items-center">
+                      <div className="relative grid h-full p-5 z-10">
+                        <div className="flex h-full items-end sm:items-start ">
+                          <div className="grid">
+                            <label className="text-sm sm:text-xl order-1 sm:order-0 font-semibold text-gray-800">
+                              Software Developer
+                            </label>
+                            <h1 className="text-xl order-0 sm:order-1  sm:text-5xl font-bold text-gray-800 drop-shadow-none md:drop-shadow-sm">
+                              Alhdrin Gungon
+                            </h1>
+                          </div>
                         </div>
-                        <div>
+                        <div className="hidden sm:flex h-full  items-end">
                           <button className="p-3 rounded-2xl hover:bg-red-200 transition-colors duration-200 bg-white text-gray-800 font-medium">
                             <label>Let's connect {"->"}</label>
                           </button>
                         </div>
                       </div>
-                      <div className="relative ">
-                        <Image
-                          src="https://i.pinimg.com/474x/40/3e/10/403e107dfc78506640c2fb48e0197fa3.jpg"
-                          height={200}
-                          width={200}
-                          alt="sample"
-                        />
+                      <div className="absolute right-0 ">
+                        <div className=" w-[20rem]    -mt-[0.5rem] sm:-mt-[2.2rem]">
+                          <Image
+                            src="https://res.cloudinary.com/dhrin1/image/upload/c_limit,w_960/f_auto/q_auto/agitlgsijcx6leygfzag?_a=BAVAcMGd0"
+                            alt="sample"
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            className="rounde-r-3xl"
+                            style={{ width: "100%", height: "auto" }}
+                            priority={true}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -185,14 +192,14 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
               <div className="grid grid-cols-4 grid-rows-3 gap-5">
-                {new Array(15).fill(0).map((i, idx) => (
+                {/* {new Array(15).fill(0).map((i, idx) => (
                   <div
                     key={idx}
                     className="size-[150px] bg-gray-100 rounded-3xl p-5"
                   >
                     A
                   </div>
-                ))}
+                ))} */}
               </div>
             </div>
           </div>
@@ -202,7 +209,7 @@ export default function Home() {
           <div className="flex flex-col">
             <div className="w-full flex justify-center">
               <div className="relative">
-                <div className="grid text-center z-10 text-red-500 absolute">
+                {/* <div className="grid text-center z-10 text-red-500 absolute">
                   <label>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   </label>
@@ -213,7 +220,7 @@ export default function Home() {
                 </div>
                 <div className="absolute -mt-10 -left-5 h-[500px] rounded-3xl bg-white w-[300px] p-5">
                   B
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
