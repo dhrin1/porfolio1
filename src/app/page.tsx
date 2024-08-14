@@ -89,66 +89,133 @@ export default function Home() {
         {/* <HeroSection />
         <AboutSection />
         <WorkSection /> */}
-        <section className="h-[780px] w-full">
-          <div className="h-full flex items-center">
+        <section className="h-auto w-full">
+          <div className="h-full flex py-[7rem]">
             <div className="w-full">
               <div className="flex flex-col space-y-5 sm:space-y-3">
-                <h1 className="text-4xl font-semibold">Hi there! 👋🏻</h1>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-5 w-full">
-                  <div className="col-span-3 md:col-span-2 h-[17rem] rounded-3xl bg-red-100 ">
+                <h1 className="text-4xl font-semibold">Hi there!👋🏻</h1>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-7 w-full">
+                  <div className="col-span-3 md:col-span-2 h-[14rem] rounded-3xl bg-red-100 ">
                     <div className="size-full flex relative items-center">
                       <div className="relative grid h-full p-5 z-10">
-                        <div className="flex h-full items-end sm:items-start ">
+                        <div className="flex h-full items-end md:items-start  ">
                           <div className="grid">
-                            <label className="text-sm sm:text-xl order-1 sm:order-0 font-semibold text-gray-800">
+                            <label className="text-sm md:text-xl order-1 md:order-0  font-semibold text-gray-800">
                               Software Developer
                             </label>
-                            <h1 className="text-xl order-0 sm:order-1  sm:text-5xl font-bold text-gray-800 drop-shadow-none md:drop-shadow-sm">
+                            <h1 className="text-xl   md:text-4xl order-0 md:order-1 font-bold text-gray-800 drop-shadow-none md:drop-shadow-sm">
                               Alhdrin Gungon
                             </h1>
                           </div>
                         </div>
-                        <div className="hidden sm:flex h-full  items-end">
-                          <button className="p-3 rounded-2xl hover:bg-red-200 transition-colors duration-200 bg-white text-gray-800 font-medium">
-                            <label>Let's connect {"->"}</label>
+                        <div className="hidden md:flex h-full items-end ">
+                          <button className="flex items-center h-8  px-3 rounded-full  hover:bg-red-200 transition-colors duration-200 bg-white text-gray-800 ">
+                            <label className=" font-medium text-xs">Let's connect {"->"}</label>
                           </button>
                         </div>
                       </div>
                       <div className="absolute right-0 ">
-                        <div className=" w-[20rem]   -mt-[2.2rem]">
-                          <Image
-                            src="https://res.cloudinary.com/dhrin1/image/upload/c_limit,w_960/f_auto/q_auto/agitlgsijcx6leygfzag?_a=BAVAcMGd0"
-                            alt="sample"
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            className="rounde-r-3xl"
-                            style={{ width: "100%", height: "auto" }}
-                            priority={true}
-                          />
+                        <div className="relative">
+                          <div className="absolute size-full">
+                            <div className="flex justify-around relative ">
+                    
+                              <div className="size-10 mt-[13rem] -ml-[12rem] absolute">
+                                  <Image
+                                    src="/assets/icons/coding.png"
+                                    alt="sample"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{ width: "100%", height: "auto" }}
+                                    priority={true}
+                                />
+                              </div>
+       
+
+                              <div className="size-10 mt-[2rem] -ml-[9rem] absolute">
+                              <Image
+                                src="/assets/icons/rocket.png"
+                                alt="sample"
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{ width: "100%", height: "auto" }}
+                                priority={true}
+                            />
+                              </div>
+
+                              <div className="size-10 mt-[8rem] -ml-[11rem] absolute">
+                              <Image
+                                src="/assets/icons/lightning.png"
+                                alt="sample"
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{ width: "100%", height: "auto" }}
+                                priority={true}
+                            />
+                              </div>
+                              <div className="size-10 mt-[10em] -mr-[13rem] absolute">
+                              <Image
+                                src="/assets/icons/star.png"
+                                alt="sample"
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{ width: "100%", height: "auto" }}
+                                priority={true}
+                            />
+                              </div>
+
+                              <div className="size-10 mt-[14em] ml-[10rem] absolute">
+                              <Image
+                                src="/assets/icons/headphone.png"
+                                alt="sample"
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{ width: "100%", height: "auto" }}
+                                priority={true}
+                            />
+                              </div>
+
+                              <div className="size-10 mt-[3em] ml-[12rem] absolute">
+                              <Image
+                                src="/assets/icons/bulb.png"
+                                alt="sample"
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{ width: "100%", height: "auto" }}
+                                priority={true}
+                            />
+                              </div>
+                            
+                            </div>
+                          </div>
+                          <div className="w-[17rem] -mt-[2.5rem]">
+                            <Image
+                              src="https://res.cloudinary.com/dhrin1/image/upload/c_limit,w_960/f_auto/q_auto/agitlgsijcx6leygfzag?_a=BAVAcMGd0"
+                              alt="sample"
+                              width={0}
+                              height={0}
+                              sizes="100vw"
+                              className="rounde-r-3xl"
+                              style={{ width: "100%", height: "auto" }}
+                              priority={true}
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className=" rounded-3xl bg-red-100">
+                  <div className="col-span-3 md:col-span-1">
                     <div className="flex justify-center items-center h-full">
-                      <div className="grid text-center">
-                        {/* {company.map((i, idx) => (
-                          <div
-                            key={idx}
-                            className="flex flex-col justify-center"
-                          >
-                            <h2
-                              className={`text-[${
-                                parseInt((company.length / 2).toFixed(), 10) -
-                                idx * 100
-                              }px]`}
-                            >
-                              {i.title}
-                            </h2>
-                            <p>{i.name}</p>
-                          </div>
-                        ))} */}
+                      <div className="grid relative">
+                        {new Array(4).fill(0).map((item, idx) => (
+                            <div key={idx} className={`size-[14rem] absolute border border-black -mt-${idx * 2} -ml-${+idx * 2} rounded-3xl bg-violet-200 p-5`}>{idx}</div>
+                        ))}
+                        <div className="size-[14rem] rounded-3xl border bg-violet-200">1</div>
                       </div>
                     </div>
                   </div>
@@ -160,7 +227,7 @@ export default function Home() {
         <section className="h-[780px] w-full ">
           <div className="h-full">
             <div className="flex flex-col space-y-5">
-              <h2 className="text-4xl font-semibold ">
+              <h2 className="text-2xl font-semibold ">
                 Revealing my works of collection projects 📦
               </h2>
               <div className="flex flex-row space-x-5 overflow-x-scroll w-full">
