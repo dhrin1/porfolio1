@@ -110,7 +110,9 @@ export default function Home() {
                         </div>
                         <div className="hidden md:flex h-full items-end ">
                           <button className="flex items-center h-8  px-3 rounded-full  hover:bg-red-200 transition-colors duration-200 bg-white text-gray-800 ">
-                            <label className=" font-medium text-xs">Let's connect {"->"}</label>
+                            <label className="cursor-pointer font-medium text-xs">
+                              Let's connect {"->"}
+                            </label>
                           </button>
                         </div>
                       </div>
@@ -118,79 +120,76 @@ export default function Home() {
                         <div className="relative">
                           <div className="absolute size-full">
                             <div className="flex justify-around relative ">
-                    
                               <div className="size-10 mt-[13rem] -ml-[12rem] absolute">
-                                  <Image
-                                    src="/assets/icons/coding.png"
-                                    alt="sample"
-                                    width={0}
-                                    height={0}
-                                    sizes="100vw"
-                                    style={{ width: "100%", height: "auto" }}
-                                    priority={true}
+                                <Image
+                                  src="/assets/icons/astronaught.png"
+                                  alt="sample"
+                                  width={0}
+                                  height={0}
+                                  sizes="100vw"
+                                  style={{ width: "100%", height: "auto" }}
+                                  priority={true}
                                 />
                               </div>
-       
 
                               <div className="size-10 mt-[2rem] -ml-[9rem] absolute">
-                              <Image
-                                src="/assets/icons/rocket.png"
-                                alt="sample"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }}
-                                priority={true}
-                            />
+                                <Image
+                                  src="/assets/icons/rocket.png"
+                                  alt="sample"
+                                  width={0}
+                                  height={0}
+                                  sizes="100vw"
+                                  style={{ width: "100%", height: "auto" }}
+                                  priority={true}
+                                />
                               </div>
 
                               <div className="size-10 mt-[8rem] -ml-[11rem] absolute">
-                              <Image
-                                src="/assets/icons/lightning.png"
-                                alt="sample"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }}
-                                priority={true}
-                            />
+                                <Image
+                                  src="/assets/icons/lightning.png"
+                                  alt="sample"
+                                  width={0}
+                                  height={0}
+                                  sizes="100vw"
+                                  style={{ width: "100%", height: "auto" }}
+                                  priority={true}
+                                />
                               </div>
-                              <div className="size-10 mt-[10em] -mr-[13rem] absolute">
-                              <Image
-                                src="/assets/icons/star.png"
-                                alt="sample"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }}
-                                priority={true}
-                            />
+                              <div className="size-12 mt-[9em] -mr-[13rem] absolute">
+                                <Image
+                                  src="/assets/icons/astronomy.png"
+                                  alt="sample"
+                                  width={0}
+                                  height={0}
+                                  sizes="100vw"
+                                  style={{ width: "100%", height: "auto" }}
+                                  priority={true}
+                                />
                               </div>
 
-                              <div className="size-10 mt-[14em] ml-[10rem] absolute">
-                              <Image
-                                src="/assets/icons/headphone.png"
-                                alt="sample"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }}
-                                priority={true}
-                            />
+                              <div className="size-10 mt-[15em] ml-[10rem] absolute">
+                                <Image
+                                  src="/assets/icons/headphone.png"
+                                  alt="sample"
+                                  width={0}
+                                  height={0}
+                                  sizes="100vw"
+                                  style={{ width: "100%", height: "auto" }}
+                                  priority={true}
+                                />
                               </div>
 
                               <div className="size-10 mt-[3em] ml-[12rem] absolute">
-                              <Image
-                                src="/assets/icons/bulb.png"
-                                alt="sample"
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto" }}
-                                priority={true}
-                            />
+                                <Image
+                                  src="/assets/icons/bulb.png"
+                                  alt="sample"
+                                  width={0}
+                                  height={0}
+                                  sizes="100vw"
+                                  style={{ width: "100%", height: "auto" }}
+                                  priority={true}
+                                />
                               </div>
-                            
                             </div>
                           </div>
                           <div className="w-[17rem] -mt-[2.5rem]">
@@ -213,15 +212,35 @@ export default function Home() {
                     <div className="flex justify-center items-center h-full">
                       <div className="grid relative">
                         {new Array(4).fill(0).map((item, idx) => (
-                            <div key={idx} className={`size-[14rem] absolute border border-black -mt-${idx * 2} -ml-${+idx * 2} rounded-3xl bg-violet-200 p-5`}>{idx}</div>
+                          <div
+                            key={idx}
+                            className={`size-[14rem] absolute border border-black -mt-[${
+                              idx * 2
+                            }] -ml-[${+idx * 2}] rounded-3xl bg-violet-200 p-5`}
+                          >
+                            {idx}
+                          </div>
                         ))}
-                        <div className="size-[14rem] rounded-3xl border bg-violet-200">1</div>
+                        <div className="size-[14rem] rounded-3xl border bg-violet-200">
+                          1
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section className="h-[780px]">
+          <div className="flex flex-col space-y-5">
+            <h2 className="text-2xl font-semibold ">I loved cars 🏎️</h2>
+            <video className="h-[20rem] rounded-3xl" autoPlay={true} loop muted>
+              <source
+                src={"/assets/media/29a44653b72cd7c1b20b7a14a9de9292_t1.mp4"}
+                type="video/mp4"
+              />
+            </video>
           </div>
         </section>
         <section className="h-[780px] w-full ">
