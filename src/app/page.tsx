@@ -1,5 +1,7 @@
+"use client";
 import DefaultLayout from "@/components/default-layout";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 function HomeLayout({ children }: { children: React.ReactNode }) {
   return <main className="max-w-screen-lg w-full px-3 ">{children}</main>;
@@ -83,6 +85,14 @@ const company: Company[] = [
 ];
 
 export default function Home() {
+  const carsMedia = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    if (carsMedia.current) {
+      carsMedia.current.play().catch((err) => console.log(err));
+    }
+  }, []);
+
   return (
     <DefaultLayout>
       <HomeLayout>
@@ -109,9 +119,12 @@ export default function Home() {
                           </div>
                         </div>
                         <div className="hidden md:flex h-full items-end ">
-                          <button className="flex items-center h-8  px-3 rounded-full  hover:bg-red-200 transition-colors duration-200 bg-white text-gray-800 ">
-                            <label className="cursor-pointer font-medium text-xs">
-                              Let's connect {"->"}
+                          <button className="flex items-center h-8  px-3 rounded-full transition-all ease-in-out group  hover:bg-red-200 duration-200 bg-white text-gray-800 ">
+                            <label className="cursor-pointer font-medium text-xs group-hover:text-red-600 ">
+                              Let's connect{" "}
+                              <span className="group-hover:animate-pulse">
+                                {"->"}
+                              </span>
                             </label>
                           </button>
                         </div>
@@ -234,13 +247,30 @@ export default function Home() {
         </section>
         <section className="h-[780px]">
           <div className="flex flex-col space-y-5">
-            <h2 className="text-2xl font-semibold ">I loved cars 🏎️</h2>
-            <video className="h-[20rem] rounded-3xl" autoPlay={true} loop muted>
-              <source
-                src={"/assets/media/29a44653b72cd7c1b20b7a14a9de9292_t1.mp4"}
-                type="video/mp4"
-              />
-            </video>
+            <h2 className="text-4xl font-semibold ">I loved cars 🏎️</h2>
+            <div className="grid grid-cols-4 gap-7">
+              <div className="col-span-2">
+                <div className="rounded-3xl bg-[#FCE7BE]">
+                  <video
+                    ref={carsMedia}
+                    className="h-[20rem] rounded-l-3xl"
+                    autoPlay={true}
+                    loop
+                    muted
+                  >
+                    <source
+                      src={
+                        "/assets/media/29a44653b72cd7c1b20b7a14a9de9292_t1.mp4"
+                      }
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
+              <div className="col-span-2">
+                <div className="rounded-3xl bg-blue-200">s</div>
+              </div>
+            </div>
           </div>
         </section>
         <section className="h-[780px] w-full ">
