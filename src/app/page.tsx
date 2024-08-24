@@ -103,17 +103,19 @@ export default function Home() {
           <div className="h-full flex py-[7rem]">
             <div className="w-full">
               <div className="flex flex-col space-y-5 sm:space-y-3">
-                <h1 className="text-4xl font-semibold">Hi there!👋🏻</h1>
+                <h1 className="text-4xl font-semibold group-[connect]">
+                  Hi there!👋🏻
+                </h1>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-7 w-full">
                   <div className="col-span-3 md:col-span-2 h-[14rem] rounded-3xl bg-red-100 ">
                     <div className="size-full flex relative items-center">
                       <div className="relative grid h-full p-5 z-10">
                         <div className="flex h-full items-end md:items-start  ">
                           <div className="grid">
-                            <label className="text-sm md:text-xl order-1 md:order-0  font-semibold text-gray-800">
-                              Software Developer
+                            <label className="text-sm md:text-xl group-hover:text-red-500 order-1 md:order-0 font-semibold text-gray-800">
+                              Full-stack Developer
                             </label>
-                            <h1 className="text-xl   md:text-4xl order-0 md:order-1 font-bold text-gray-800 drop-shadow-none md:drop-shadow-sm">
+                            <h1 className="text-xl  md:text-4xl order-0 md:order-1 font-bold text-gray-800 drop-shadow-none md:drop-shadow-sm">
                               Alhdrin Gungon
                             </h1>
                           </div>
@@ -145,7 +147,7 @@ export default function Home() {
                                 />
                               </div>
 
-                              <div className="size-10 mt-[2rem] -ml-[9rem] absolute">
+                              <div className="size-10 mt-[2rem] -ml-[9rem] absolute ">
                                 <Image
                                   src="/assets/icons/rocket.png"
                                   alt="sample"
@@ -245,12 +247,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="h-[780px]">
+        <section className="pb-[7rem]">
           <div className="flex flex-col space-y-5">
             <h2 className="text-4xl font-semibold ">I loved cars 🏎️</h2>
-            <div className="grid grid-cols-4 gap-7">
-              <div className="col-span-2">
-                <div className="rounded-3xl bg-[#FCE7BE]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-7 ">
+              <div className="h-[327px]">
+                <div className="rounded-3xl flex flex-row bg-black ">
+                  {/* bg-[#FCE7BE] "> */}
                   <video
                     ref={carsMedia}
                     className="h-[20rem] rounded-l-3xl"
@@ -265,10 +268,36 @@ export default function Home() {
                       type="video/mp4"
                     />
                   </video>
+                  <div className="p-2">
+                    <h2 className="text-3xl font-semibold">Drift King</h2>
+                  </div>
                 </div>
               </div>
-              <div className="col-span-2">
-                <div className="rounded-3xl bg-blue-200">s</div>
+              <div className="h-[327px]">
+                <div className="rounded-3xl size-full bg-green-200">
+                  <div className="relative">
+                    <div className="w-[36rem] ml-[0.3rem] -mt-[3.6rem] absolute">
+                      <Image
+                        src="/assets/img/author.png"
+                        alt="sample"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        className="rounde-r-3xl"
+                        style={{ width: "100%", height: "auto" }}
+                        priority={true}
+                      />
+                    </div>
+                    <figcaption className="relative p-3 w-1/2">
+                      <h2 className="text-gray-800 font-medium">
+                        I love cool things Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit. Quas voluptatum autem
+                        quasi ullam nesciunt, distinctio facere omnis
+                        necessitatibus, est a culpa ratione, dolores amet
+                      </h2>
+                    </figcaption>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
